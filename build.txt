@@ -1,0 +1,108 @@
+﻿
+> my-portfolio@0.0.0 build
+> vite build
+
+[36mvite v8.0.0 [32mbuilding client environment for production...[36m[39m
+[2K
+transforming...Γ£ô 2714 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     0.46 kB Γöé gzip:   0.29 kB
+dist/assets/index-CzjJCeLl.css     16.33 kB Γöé gzip:   3.59 kB
+dist/assets/index-nkgnJHqR.js   1,527.34 kB Γöé gzip: 445.65 kB
+
+node.exe : [33m[plugin 
+builtin:vite-reporter] 
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Users\rajsi\AppData\Roaming\ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpe 
+   cified: ([33m[plugin builtin:vi  
+  te-reporter] :String) [], Remote   
+ Exception
+    + FullyQualifiedErrorId : Native 
+   CommandError
+ 
+(!) Some chunks are larger than 500 
+kB after minification. Consider:
+- Using dynamic import() to 
+code-split the application
+- Use build.rolldownOptions.output.co
+deSplitting to improve chunking: http
+s://rolldown.rs/reference/OutputOptio
+ns.codeSplitting
+- Adjust chunk size limit for this 
+warning via 
+build.chunkSizeWarningLimit.[39m
+[31mΓ£ù[39m Build failed in 743ms
+[31merror during build:
+[31mBuild failed with 1 error:
+
+Error: [vite]: Rolldown failed to 
+resolve import 
+"react-intersection-observer" from "C
+:/My-Portfolio/src/components/section
+s/ProjectsSection.jsx".
+This is most likely unintended 
+because it can break your 
+application at runtime.
+If you do want to externalize this 
+module explicitly add it to
+`build.rollupOptions.external`
+    at viteLog (file:///C:/My-Portfol
+io/node_modules/vite/dist/node/chunks
+/node.js:32887:57)
+    at file:///C:/My-Portfolio/node_m
+odules/vite/dist/node/chunks/node.js:
+32923:71
+    at onwarn (file:///C:/My-Portfoli
+o/node_modules/@vitejs/plugin-react/d
+ist/index.js:40:7)
+    at file:///C:/My-Portfolio/node_m
+odules/vite/dist/node/chunks/node.js:
+32923:28
+    at onRollupLog (file:///C:/My-Por
+tfolio/node_modules/vite/dist/node/ch
+unks/node.js:32918:63)
+    at onLog (file:///C:/My-Portfolio
+/node_modules/vite/dist/node/chunks/n
+ode.js:32688:4)
+    at file:///C:/My-Portfolio/node_m
+odules/rolldown/dist/shared/rolldown-
+build-4YnQkA76.mjs:49:26
+    at logger (file:///C:/My-Portfoli
+o/node_modules/rolldown/dist/shared/r
+olldown-build-4YnQkA76.mjs:40:3)
+    at onLog (file:///C:/My-Portfolio
+/node_modules/rolldown/dist/shared/bi
+ndingify-input-options-Cu7pt6SZ.mjs:1
+945:32)[31m
+    at 
+aggregateBindingErrorsIntoJsError (fi
+le:///C:/My-Portfolio/node_modules/ro
+lldown/dist/shared/error-CP8smW_P.mjs
+:48:18)
+    at unwrapBindingResult (file:///C
+:/My-Portfolio/node_modules/rolldown/
+dist/shared/error-CP8smW_P.mjs:18:128
+)
+    at #build (file:///C:/My-Portfoli
+o/node_modules/rolldown/dist/shared/r
+olldown-build-4YnQkA76.mjs:3311:34)
+    at async buildEnvironment (file:/
+//C:/My-Portfolio/node_modules/vite/d
+ist/node/chunks/node.js:32794:64)
+    at async Object.build (file:///C:
+/My-Portfolio/node_modules/vite/dist/
+node/chunks/node.js:33216:19)
+    at async Object.buildApp (file://
+/C:/My-Portfolio/node_modules/vite/di
+st/node/chunks/node.js:33213:153)
+    at async CAC.<anonymous> (file://
+/C:/My-Portfolio/node_modules/vite/di
+st/node/cli.js:778:3) {
+  errors: [Getter/Setter]
+}[39m

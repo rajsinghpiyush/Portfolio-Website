@@ -1,0 +1,176 @@
+.footer-print {
+  background: var(--bg-color);
+  padding: 60px 0 30px;
+  border-top: 4px solid var(--text-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-print::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--text-primary);
+}
+
+.footer-masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--gold);
+  margin-bottom: 48px;
+}
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 0.8;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.footer-logo span {
+  font-size: 0.9rem;
+  color: var(--beni);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  margin-left: 12px;
+}
+
+.footer-colophon {
+  text-align: right;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 60px;
+}
+
+.footer-grid h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+.footer-story p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  text-align: justify;
+}
+
+.footer-cta {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--beni);
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.footer-cta:hover { color: var(--gold); }
+
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-links a {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+
+.footer-links a:hover { color: var(--beni); }
+
+.footer-channels {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-stamps {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.social-stamps a {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: all 0.3s;
+}
+
+.social-stamps a:hover {
+  background: var(--text-primary);
+  color: var(--bg-color);
+  transform: translateY(-4px);
+  box-shadow: 4px 4px 0 var(--gold);
+}
+
+/* Japanese "Hanko" (Seal) element */
+.footer-hanko {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--beni);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--beni);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 900;
+  opacity: 0.8;
+  align-self: flex-start;
+  transform: rotate(-5deg);
+}
+
+.footer-circulation {
+  padding-top: 24px;
+  border-top: 1px dashed var(--gold);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.footer-credit {
+  color: var(--gold);
+}
+
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  .footer-masthead { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .footer-circulation { flex-direction: column; gap: 12px; text-align: center; }
+}

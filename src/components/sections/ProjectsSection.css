@@ -1,0 +1,162 @@
+.slider-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 8px; /* Room above the ornament */
+}
+
+.slider-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.slider-btn {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--text-primary);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+  background: var(--beni);
+  color: #f4f0e8;
+  border-color: var(--beni);
+}
+
+.projects-slider {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 10px 40px 10px; /* Padding inside allows box-shadow lift on hover */
+  margin: 0 -10px;              /* Offset padding to keep alignment */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE / Edge */
+}
+
+.projects-slider::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari */
+}
+
+.project-card {
+  min-width: 350px;
+  max-width: 350px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: var(--bg-secondary);
+  border: 1px solid var(--gold);
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle beni accent bar on left */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 0;
+  background: var(--beni);
+  transition: height 0.4s ease;
+}
+
+.project-card:hover::before { height: 100%; }
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 6px 8px 0 var(--gold);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed var(--border-light);
+}
+
+.project-links {
+  display: flex;
+  gap: 14px;
+}
+
+.project-links a {
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+
+.project-links a:hover { color: var(--beni); }
+
+.project-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.project-date {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  color: var(--beni);
+  display: block;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-light);
+}
+
+.tech-item {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+  padding: 4px 8px;
+  font-family: var(--font-heading);
+  background: var(--bg-color);
+}
+
+@media (max-width: 768px) {
+  .slider-header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .slider-controls {
+    margin-top: 20px;
+    align-self: flex-end;
+  }
+  .project-card {
+    min-width: 300px;
+    max-width: 300px;
+    padding: 24px 20px;
+  }
+}

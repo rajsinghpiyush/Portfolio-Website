@@ -1,0 +1,90 @@
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 60px;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 60px;
+}
+
+.about-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-description {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  line-height: 1.9;
+  text-align: justify;
+}
+
+.about-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-left: 2px solid var(--beni);
+  padding-left: 24px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  justify-self: end;
+  align-self: center;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--gold);
+  border: 1px solid var(--gold);
+}
+
+.about-card {
+  padding: 36px 30px;
+  text-align: left;
+  background: var(--bg-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.about-card:hover {
+  background: var(--text-primary);
+  color: var(--bg-color);
+}
+
+.about-card:hover h3, .about-card:hover p {
+  color: var(--bg-color);
+}
+
+.card-icon {
+  color: var(--beni);
+  margin-bottom: 20px;
+  transition: color 0.3s;
+}
+
+.about-card:hover .card-icon {
+  color: var(--gold);
+}
+
+.about-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+  transition: color 0.3s;
+}
+
+.about-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  transition: color 0.3s;
+}
+
+@media (max-width: 768px) {
+  .about-content { grid-template-columns: 1fr; gap: 30px; }
+  .about-cards { grid-template-columns: 1fr; }
+}

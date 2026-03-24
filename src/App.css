@@ -1,0 +1,73 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ===== SECTION WRAPPER (Japanese Broadsheet Style) ===== */
+.section-wrapper {
+  padding: var(--section-padding);
+  position: relative;
+  border-bottom: 1px solid var(--gold);
+}
+
+/* Decorative double-line top border for each section */
+.section-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--text-primary);
+  display: none; /* Only show on specific sections via modifiers */
+}
+
+/* ===== SECTION HEADER ===== */
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  font-family: var(--font-heading);
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.section-title-accent {
+  color: var(--beni);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* Gold ornament line under section title */
+.section-ornament {
+  width: 80px;
+  height: 2px;
+  background: var(--gold);
+  margin: 12px auto 40px;
+  position: relative;
+}
+.section-ornament::before,
+.section-ornament::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background: var(--beni);
+}
+.section-ornament::before { left: -8px; }
+.section-ornament::after  { right: -8px; }

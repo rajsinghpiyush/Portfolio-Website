@@ -1,0 +1,201 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 0;
+  z-index: 1000;
+  background: var(--bg-color);
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.header.scrolled {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gold);
+  /* Very subtle shadow for depth */
+  box-shadow: 0 2px 20px rgba(26, 17, 8, 0.06);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* === LOGO === */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--beni);
+}
+
+/* === DESKTOP NAV === */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links li a {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.3s;
+}
+
+/* Gold underline sweep on hover */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background: var(--gold);
+  transition: width 0.35s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--text-primary);
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* === RESUME BUTTON === */
+.resume-btn {
+  padding: 8px 20px;
+  background: var(--beni);
+  color: #f4f0e8;
+  border: 1px solid var(--beni);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: transparent;
+  color: var(--beni);
+  border-color: var(--beni);
+}
+
+/* === THEME TOGGLE === */
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--beni);
+  color: #f4f0e8;
+  border-color: var(--beni);
+}
+
+/* === MOBILE === */
+.mobile-actions {
+  display: none;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  color: var(--text-primary);
+}
+
+/* === MOBILE OVERLAY === */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-color);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.mobile-nav-links li a {
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.mobile-nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: var(--beni);
+  transition: width 0.35s ease;
+}
+
+.mobile-nav-links li a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav { display: none; }
+  .mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 2000;
+    position: relative;
+  }
+  .mobile-menu-toggle {
+    display: block;
+    z-index: 2000;
+    position: relative;
+  }
+}

@@ -1,0 +1,75 @@
+.skills-kanji-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.kanji-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--gold);
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  z-index: 1;
+}
+
+.kanji-card:hover {
+  box-shadow: 8px 8px 0 var(--beni);
+  border-color: var(--beni);
+}
+
+.kanji-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--beni);
+  padding-bottom: 12px;
+  display: inline-block;
+}
+
+.kanji-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.kanji-skill-badge {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  background: var(--bg-color);
+  border: 1px solid var(--border-light);
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  cursor: default;
+  position: relative;
+}
+
+/* When the card is hovered, the badges gently light up their borders */
+.kanji-card:hover .kanji-skill-badge {
+  border-color: var(--gold);
+}
+
+/* Individual badge hover interaction */
+.kanji-skill-badge:hover {
+  background: var(--beni);
+  color: #f4f0e8;
+  border-color: var(--beni) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(155, 35, 53, 0.2);
+}
+
+@media (max-width: 600px) {
+  .kanji-card {
+    padding: 30px 24px;
+  }
+}
