@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Briefcase, Code, Award, Users } from 'lucide-react';
 import './ExperienceSection.css';
