@@ -50,7 +50,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.7 }}
         >
-          Software Engineer · Full-Stack Developer · Problem Solver
+          Software Engineer · Full-Stack Developer · Data Scientist
         </motion.p>
 
         {/* Two-column intro */}

@@ -89,8 +89,8 @@ const AboutSection = () => {
         <div className="about-cards">
           <div className="about-card" ref={addToCardsRef}>
             <div className="card-icon"><Code size={28} /></div>
-            <h3>Frontend / UI</h3>
-            <p>React.js, Framer Motion, GSAP, HTML/CSS — crafting immersive interfaces with rich micro-interactions.</p>
+            <h3>ML Enthusiast</h3>
+            <p>Machine Learning Enthusiast with hands-on experience in data analysis and model building</p>
           </div>
           <div className="about-card" ref={addToCardsRef}>
             <div className="card-icon"><Server size={28} /></div>
@@ -99,12 +99,12 @@ const AboutSection = () => {
           </div>
           <div className="about-card" ref={addToCardsRef}>
             <div className="card-icon"><Database size={28} /></div>
-            <h3>Databases</h3>
-            <p>MongoDB with Mongoose — designing resilient schemas and efficient data pipelines.</p>
+            <h3>Open Source Contributor</h3>
+            <p>Contributed to the Desh Darshan Open Source Project under GirlScript Summer of Code (GSSoC)</p>
           </div>
           <div className="about-card" ref={addToCardsRef}>
             <div className="card-icon"><Globe size={28} /></div>
-            <h3>Problem Solving</h3>
+            <h3>Problem Solver</h3>
             <p>C++, Java, Python — 260+ problems solved across platforms with a competitive mindset.</p>
           </div>
         </div>
