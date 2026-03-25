@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { motion } from 'framer-motion';
 import './Footer.css';
 
 const Footer = () => {

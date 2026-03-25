@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 import { Briefcase, Code, Award, Users } from 'lucide-react';
 import './ExperienceSection.css';
 

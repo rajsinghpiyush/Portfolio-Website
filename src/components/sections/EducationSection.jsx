@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 import { GraduationCap } from 'lucide-react';
 import './EducationSection.css';
 

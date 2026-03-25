@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 import { Award, Trophy, Bookmark } from 'lucide-react';
 import './AchievementsSection.css';
 

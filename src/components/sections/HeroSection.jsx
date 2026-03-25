@@ -1,4 +1,5 @@
-import { useScroll, useTransform } from 'framer-motion';
+/* eslint-disable no-unused-vars */
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import './HeroSection.css';
 

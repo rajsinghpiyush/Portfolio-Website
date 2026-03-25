@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Github, Folder, ChevronLeft, ChevronRight } from 'lucide-react';
 import './ProjectsSection.css';
