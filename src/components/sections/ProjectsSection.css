@@ -30,6 +30,40 @@
   border-color: var(--beni);
 }
 
+.project-filters {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.filter-btn:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.filter-btn.active {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
 .projects-slider {
   display: flex;
   gap: 32px;
@@ -105,6 +139,19 @@
   line-height: 1.2;
   margin-bottom: 10px;
   color: var(--text-primary);
+}
+
+.project-category {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  color: var(--gold);
+  display: inline-block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(212, 175, 55, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .project-date {

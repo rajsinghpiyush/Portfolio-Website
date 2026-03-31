@@ -7,12 +7,12 @@ const skillCategories = [
   {
     title: 'Programming Languages',
     kanji: '言語', // Language
-    skills: ['C++', 'C', 'Java', 'Python', 'Kotlin']
+    skills: ['C++', 'C', 'Java', 'Python']
   },
   {
-    title: 'Web Development',
+    title: 'Development',
     kanji: '開発', // Development
-    skills: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express', 'MongoDB']
+    skills: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express', 'MongoDB','Kotlin']
   },
   {
     title: 'ML & Data',

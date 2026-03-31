@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Github, Folder, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -8,6 +8,7 @@ import './ProjectsSection.css';
 const projects = [
   {
     title: 'Centrion Project Management',
+    category: 'Web Development',
     date: 'May 2023 - Jul 2023',
     description: 'A comprehensive task tracking system with real-time updates using WebSockets. Features role-based access control, CRUD operations for projects/tasks, and team collaboration & commenting features.',
     tech: ['Express', 'React', 'Tailwind', 'MongoDB', 'Socket.io'],
@@ -15,6 +16,7 @@ const projects = [
   },
   {
     title: 'Airbnb-Like Booking Platform',
+    category: 'Web Development',
     date: 'Sep 2025 - Oct 2025',
     description: 'A full-stack booking website inspired by Airbnb. Implemented with MVC architecture, complete user authentication (bcrypt, express session), and modularized codebase for scalability.',
     tech: ['Node.js', 'Express', 'React', 'MongoDB'],
@@ -22,6 +24,7 @@ const projects = [
   },
   {
     title: 'Jharkhand Literacy Analysis',
+    category: 'Predictive Analysis',
     date: 'Mar 2025 - Apr 2025',
     description: 'Data analysis on Jharkhand\'s 2011 Census data. Investigated female education trends, highlighted gender gaps by region, and applied Scikit-learn models to predict future population trends.',
     tech: ['Python', 'NumPy', 'Pandas', 'Scikit-learn'],
@@ -29,13 +32,15 @@ const projects = [
   },
   {
     title: 'StayPrice-Analytics',
+    category: 'Predictive Analysis',
     date: '2024',
-    description: 'This project uses machine learning techniques to predict hotel room prices based on Airbnb listing data. Various regression and ensemble models were evaluated, with XGBoost achieving the best performance. The study demonstrates the effectiveness of data-driven pricing in the hospitality industry.',
+    description: 'This project uses machine learning techniques to predict hotel room prices based on Airbnb listing data. Various regression and ensemble models were evaluated, with XGBoost achieving the best performance.',
     tech: ['Python', 'Scikit-learn', 'NumPy', 'Pandas'],
     github: 'https://github.com/rajsinghpiyush/StayPrice-Analytics'
   },
   {
     title: 'Kids World – Book Shop',
+    category: 'Web Development',
     date: 'May 2023 - Jul 2023',
     description: 'A responsive e-commerce interface with precise cart price calculations. Integrated a WhatsApp order-generation feature that creates a direct checkout link from the cart for a fast desktop and mobile ordering experience.',
     tech: ['HTML', 'CSS', 'JavaScript'],
@@ -66,6 +71,8 @@ const cardVariants = {
 };
 
 const ProjectsSection = () => {
+  const [filter, setFilter] = useState('All');
+  
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -85,6 +92,10 @@ const ProjectsSection = () => {
     }
   };
 
+  const filteredProjects = filter === 'All' 
+    ? projects 
+    : projects.filter(project => project.category === filter);
+
   return (
     <section id="projects" className="projects-section section-wrapper">
       <div className="container">
@@ -100,6 +111,19 @@ const ProjectsSection = () => {
             </button>
           </div>
         </div>
+        
+        <div className="project-filters">
+          {['All', 'Web Development', 'Predictive Analysis'].map(cat => (
+            <button 
+              key={cat} 
+              className={`filter-btn ${filter === cat ? 'active' : ''}`}
+              onClick={() => setFilter(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
         <div className="section-ornament" />
 
         <motion.div 
@@ -112,7 +136,7 @@ const ProjectsSection = () => {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
         >
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <motion.div 
               key={index}
               className="project-card"
@@ -129,6 +153,9 @@ const ProjectsSection = () => {
               </div>
               
               <h3 className="project-title">{project.title}</h3>
+              {project.category && (
+                <span className="project-category">{project.category}</span>
+              )}
               <span className="project-date">{project.date}</span>
               
               <p className="project-description">

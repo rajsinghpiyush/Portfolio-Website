@@ -94,7 +94,7 @@ const AboutSection = () => {
           </div>
           <div className="about-card" ref={addToCardsRef}>
             <div className="card-icon"><Server size={28} /></div>
-            <h3>Backend Logic</h3>
+            <h3>Backend Architect</h3>
             <p>Node.js, Express, MVC architecture — building scalable and secure server-side applications.</p>
           </div>
           <div className="about-card" ref={addToCardsRef}>
